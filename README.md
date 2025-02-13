@@ -13,7 +13,6 @@ This action checks if the latest commit message is a haiku. The commit message i
 4) The third line consits of five syllables
 
 If the commit message is a haiku the action will take its contents and generate ascii art. The art is then written to a file poetry.md. 
-
 Example format:
 
 ```
