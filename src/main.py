@@ -28,7 +28,7 @@ if __name__ == '__main__':
     #2
     if is_haiku(commit_message):
         haiku = pyfiglet.figlet_format(commit_message)
-        with open('../poetry.md', 'w') as f:
+        with open(file_path, 'w') as f:
             f.write(haiku)
         f.close()
         commit_and_push(repo, branch, file_path)
