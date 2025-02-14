@@ -14,7 +14,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Generate haiku art
-        uses: henriettelienrebnor/Fagdag@main
+        uses: erikafrydendal/fagdag-github-action@haikutest
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
           PR_NUMBER: ${{ github.event.number }}
+        with:
+          PR_NUMBER: ''

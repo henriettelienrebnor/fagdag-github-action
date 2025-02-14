@@ -1,5 +1,5 @@
 import unittest
-from solution.haiku_checker import count_syllables, is_haiku
+from haiku_checker import count_syllables, is_haiku
 
 class TestHaikuChecker(unittest.TestCase):
 
