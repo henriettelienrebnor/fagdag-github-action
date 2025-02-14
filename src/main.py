@@ -7,6 +7,7 @@ from github_utils import commit_and_push, get_latest_commit_message
 #En test av haiku pr
 #enda en test
 #en tredje test
+#den siste testen
 
 if __name__ == '__main__':
 
