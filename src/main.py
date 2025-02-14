@@ -5,6 +5,7 @@ from haiku_checker import is_haiku
 from github_utils import commit_and_push, get_latest_commit_message
 
 #En test av haiku pr
+#enda en test
 
 if __name__ == '__main__':
 
