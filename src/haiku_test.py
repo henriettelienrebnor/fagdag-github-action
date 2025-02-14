@@ -14,9 +14,11 @@ class TestHaikuChecker(unittest.TestCase):
     def test_is_haiku(self):
         haiku_valid = "An old silent pond - The frog jumps into the pond - Splash! Silence again."
         haiku_invalid = "An old silent pond - The frog jumps into the pond - Splash! Water everywhere."
+        haiku_valid2 = "The light of a candle - Is transferred to another candle - spring twilight"
 
         self.assertTrue(is_haiku(haiku_valid))   
-        self.assertFalse(is_haiku(haiku_invalid)) 
+        self.assertFalse(is_haiku(haiku_invalid))
+        self.assertTrue(is_haiku(haiku_valid2))
         
 if __name__ == '__main__':
     unittest.main()
