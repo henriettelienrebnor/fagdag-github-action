@@ -21,7 +21,17 @@ if __name__ == '__main__':
     branch = pull_request.head.ref 
     
     file_path = "poetry.md".replace("/github/workspace/", "")
+
+    latest_commitm = get_latest_commit_message(pull_request)
     
+    if is_haiku(latest_commitm) == True:
+        art = pyfiglet.figlet_format(latest_commitm)
+        
+        fil = open("haiku.md", "x")
+        fil.write(art)
+
+        commit_and_push(repo, branch, file_path)
+
     #TODO 
     # 1) Get the latest commit message
     # 2) Check if the commit message follows the haiku format
