@@ -5,10 +5,10 @@ FROM python:3.12.5-alpine3.20
 RUN pip install --no-cache pyyaml PyGithub
 RUN pip install pyfiglet
 
-WORKDIR /usr/src
+WORKDIR /usr/solution
 
 #Copies code files from the actions repository to the container
-COPY src .
+COPY solution .
 
 #Code file to execute when teh docker container starts up
-ENTRYPOINT [ "python", "/usr/src/main.py" ]
+ENTRYPOINT [ "python", "/usr/solution/main.py" ]
