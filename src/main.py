@@ -4,6 +4,8 @@ import pyfiglet
 from haiku_checker import is_haiku
 from github_utils import commit_and_push, get_latest_commit_message
 
+#En test av haiku pr
+
 if __name__ == '__main__':
 
     acces_token = os.environ.get('GITHUB_TOKEN')
