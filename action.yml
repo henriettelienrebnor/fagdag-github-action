@@ -1,11 +1,20 @@
-name: "Haiku Art Generator"
-description: "Generates haiku art"
-inputs:
-  PR_NUMBER:
-    description: "Pull Request Number"
-    required: true
-runs:
-  using: "docker"
-  image: "Dockerfile"
-  env:
-    PR_NUMBER: ${{ inputs.PR_NUMBER }}
+name: Haiku Commit Art Generator
+on:
+  pull_request
+  
+jobs: 
+ generate_haiku_art:
+    runs-on: ubuntu-latest
+    permissions:
+        contents: write 
+        pull-requests: write  
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate haiku art
+        uses: eskilvm/fagdag-github-action@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.github_token }}
+          PR_NUMBER: ${{ github.event.number }}
