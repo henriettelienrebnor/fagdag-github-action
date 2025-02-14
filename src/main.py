@@ -35,4 +35,6 @@ if __name__ == '__main__':
     # 3) If this is the case:
     #      - Generate ascii art from the commit message using pyfiglet 
     #      - Write the ascii art to haiku.md
-    #      - Commit and push the results!      
+    #      - Commit and push the results!     
+
+    #Test
