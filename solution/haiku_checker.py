@@ -26,3 +26,4 @@ def count_syllables(word):
     syllables = re.findall(r'[aeiouy]+', word)
     return max(1, len(syllables))  
 
+print(is_haiku('An old silent pond... - A frog jumps into the pond, - splash! Silence again'))
