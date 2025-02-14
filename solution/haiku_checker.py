@@ -17,7 +17,6 @@ def count_syllables_in_line(line):
     return sum(count_syllables(word) for word in words)
 
 def count_syllables(word):
-    """Count vowel groups in a word. Remove silent e unless word ends with le"""
     word = word.lower()
     if word.endswith("e") and not word.endswith("le"):
         word = word[:-1]  
@@ -25,4 +24,7 @@ def count_syllables(word):
     # Count vowel groups
     syllables = re.findall(r'[aeiouy]+', word)
     return max(1, len(syllables))  
+
+
+is_haiku("An old silent pond-A frog jumps into the pond-splash! Silence again")
 
