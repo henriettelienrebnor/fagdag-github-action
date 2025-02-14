@@ -23,14 +23,15 @@ if __name__ == '__main__':
     file_path = "poetry.md".replace("/github/workspace/", "")
 
     #1
-    commit_message = [c.commit.message for c in pull_request.get_commits()][-1]  
+    commit_message = get_latest_commit_message(pull_request)
 
     #2
     if is_haiku(commit_message):
         haiku = pyfiglet.figlet_format(commit_message)
-        with open('../poetry.md') as f:
+        with open('../poetry.md', 'w') as f:
             f.write(haiku)
         f.close()
+        commit_and_push(repo, branch, file_path)
     
     #TODO 
     # 1) Get the latest commit message
